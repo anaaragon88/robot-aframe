@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!--Extras-->
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.1/dist/aframe-extras.min.js"></script>
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+        body {
+            height: 100%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* DEMO STYLE */
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        /*A-FRAME*/
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        a-scene {
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* remove http notice */
+        .a-modal {
+            display: none;
+        }
+
+        /* remove vr button */
+        .a-enter-vr {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <a-scene embedded>
+            <a-entity id="robi" position="1.3 -0.1 -4" scale="0.5 0.5 0.5" gltf-model="assets/robot.glb"></a-entity>
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="blue"></a-plane>
+            <a-sky color="#ECECEC"></a-sky>
+            <a-entity light="type: ambient; color: #FFF; intensity:2"></a-entity>
+            <a-entity light="type: directional; color: #FFF; intensity: 2" position="0.5 1 1"></a-entity>
+        </a-scene>
+    </div>
+    <div id="wrapper" class="content d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <div class="container py-5">
+                <h1>WEB EXTENDIDA</h1>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 28rem;">
+                            <iframe class="card-img-top" width="100%" height="400"
+                                src="https://webextendida.es/wx.html">
+                            </iframe>
+                            <div class="card-body">
+                                <h5 class="card-title">Intro</h5>
+                                <p class="card-text">La realidad extendida engloba la realidad virtual, aumentada y
+                                    mixta, así como elementos que existen entre estas realidades</p>
+                                <a href="#" id="ready" class="btn btn-primary">Saludar</a>
+                                <a href="#" id="run" class="btn btn-primary">Correr</a>
+                                <a href="#" id="death" class="btn btn-primary">Llega JS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 mx-auto">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://picsum.photos/800/600" class="card-img-top" alt="test">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted">Place sticky footer content here.</span>
+            </div>
+        </footer>
+    </div>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // PERCENTAGE SCROLL
+            window.addEventListener('scroll', function () {
+                var scrollTop = window.scrollY || document.documentElement.scrollTop;
+                var docHeight = document.documentElement.scrollHeight;
+                var winHeight = window.innerHeight;
+                var scrollPercent = (scrollTop) / (docHeight - winHeight);
+                var scrollPercentRounded = Math.round(scrollPercent * 100);
+                var scroll360 = Math.round(((scrollPercent * 10) + Number.EPSILON) * 100) / 1000 * 360;
+                document.getElementById('robi').setAttribute('rotation', '0 ' + scroll360);
+                console.log(scrollPercentRounded, scroll360);
+            });
+
+            // Y con las flechas se mueve todo...
+        });
+
+
+        /*$(document).ready(function() {
+            // PERCENTAGE SCROLL
+            $(window).scroll(function(e){
+                var scrollTop = $(window).scrollTop();
+                var docHeight = $(document).height();
+                var winHeight = $(window).height();
+                var scrollPercent = (scrollTop) / (docHeight - winHeight);
+                var scrollPercentRounded = Math.round(scrollPercent * 100);
+                var scroll360 = Math.round(((scrollPercent * 10) + Number.EPSILON) * 100) / 1000 * 360;
+                $('#robi').attr('rotation', '0 0'+ scroll360)
+                console.log(scrollPercentRounded, scroll360);
+            });
+
+            // Y con las flechas se mueve todo...
+        });
+        */
+
+        // https://poly.pizza/m/QCm7qe9uNJ
+        var robi = document.getElementById('robi');
+
+        document.getElementById('ready').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var robi = document.getElementById('robi');
+
+            robi.setAttribute('animation-mixer', { clip: "RobotArmature|Robot_Wave" });
+            robi.components['animation-mixer'].play();
+
+            setTimeout(function () {
+                robi.removeAttribute('animation-mixer');
+            }, 2000);
+        });
+
+        document.getElementById('run').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var robi = document.getElementById('robi'); // Asegúrate de tener el elemento con el ID 'robi'
+
+            robi.setAttribute('animation-mixer', 'clip: RobotArmature|Robot_Running');
+            robi.components['animation-mixer'].play();
+
+            setTimeout(function () {
+                robi.removeAttribute('animation-mixer');
+            }, 4000);
+        });
+
+        document.getElementById('death').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var robi = document.getElementById('robi'); // Asegúrate de tener el elemento con el ID 'robi'
+
+            robi.setAttribute('animation-mixer', 'clip: RobotArmature|Robot_Death');
+            robi.components['animation-mixer'].play();
+
+            setTimeout(function () {
+                robi.components['animation-mixer'].pause();
+            }, 900);
+        });
+
+
+        /*$('#ready').click(function(e) {
+            e.preventDefault();
+            robi.setAttribute('animation-mixer', {clip: "RobotArmature|Robot_Wave"});
+            robi.components['animation-mixer'].play();
+            setTimeout(function() {
+                robi.removeAttribute('animation-mixer');
+            }, 2000);
+        });*/
+
+        /*$('#run').click(function (e) {
+            e.preventDefault();
+            robi.setAttribute('animation-mixer', { clip: "RobotArmature|Robot_Running" });
+            robi.components['animation-mixer'].play();
+            setTimeout(function () {
+                robi.removeAttribute('animation-mixer');
+            }, 4000);
+        });
+
+        $('#death').click(function (e) {
+            e.preventDefault();
+            robi.setAttribute('animation-mixer', { clip: "RobotArmature|Robot_Death" });
+            robi.components['animation-mixer'].play();
+            setTimeout(function () {
+                robi.components['animation-mixer'].pause();
+            }, 900);
+        });*/
+    </script>
+</body>
