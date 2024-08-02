@@ -79,8 +79,8 @@
                 <div class="row mb-4">
                     <div class="col-12 mx-auto">
                         <div class="card" style="width: 28rem;">
-                            <iframe class="card-img-top" width="100%" height="400"
-                                src="https://webextendida.es/wx.html">
+                            <iframe class="card-img-top" width="1000" height="300"
+                                src="wx.html">
                             </iframe>
                             <div class="card-body">
                                 <h5 class="card-title">Intro</h5>
@@ -210,12 +210,12 @@
         document.addEventListener('DOMContentLoaded', function () {
             // PERCENTAGE SCROLL
             window.addEventListener('scroll', function () {
-                var scrollTop = window.scrollY || document.documentElement.scrollTop;
-                var docHeight = document.documentElement.scrollHeight;
-                var winHeight = window.innerHeight;
-                var scrollPercent = (scrollTop) / (docHeight - winHeight);
-                var scrollPercentRounded = Math.round(scrollPercent * 100);
-                var scroll360 = Math.round(((scrollPercent * 10) + Number.EPSILON) * 100) / 1000 * 360;
+                let scrollTop = window.scrollY || document.documentElement.scrollTop;
+                let docHeight = document.documentElement.scrollHeight;
+                let winHeight = window.innerHeight;
+                let scrollPercent = (scrollTop) / (docHeight - winHeight);
+                let scrollPercentRounded = Math.round(scrollPercent * 100);
+                let scroll360 = Math.round(((scrollPercent * 10) + Number.EPSILON) * 100) / 1000 * 360;
                 document.getElementById('robi').setAttribute('rotation', '0 ' + scroll360);
                 console.log(scrollPercentRounded, scroll360);
             });
